@@ -5,17 +5,16 @@ Python module for simulation Aquariums.
 
 from collections import defaultdict
 
+
 class Aquarium:
     """Example class to model an aquarium
     """
-    def __init__(self, name="Pierre's Underwater World"):
+    def __init__(self, name="Atlantis"):
         self.name = name
-        # self.fish = {}
         self.fish = defaultdict(int)
 
     def add_fish(self, fish_species):
         """Incrementing count for fish_species in fish dict."""
-        # assert type(fish_species) == str
         if isinstance(fish_species, str):
             self.fish[fish_species] += 1
         else:
@@ -23,8 +22,12 @@ class Aquarium:
 
     def generate_fish_report(self):
         """Iterate over and summarize self.fish dictionary."""
+        if len(self.fish) == 0:
+            print('No fish in here, come back later')
+
         for species, count in self.fish.items():
             print(f'{species}: {count}')
+
 
 class Habitat:
     """General class to represent a habitat with species in it."""
