@@ -60,3 +60,15 @@ def train_validation_test_split(
         random_state=random_state, shuffle=shuffle)
 
     return X_train, X_val, X_test, y_train, y_val, y_test
+
+import seaborn as sns 
+
+def confusion_matrix_viz(y_true, y_pred):
+    """
+    confusion matrix in a visualization format
+    """ 
+    matrix = confusion_matrix(y_true, y_pred)
+return sns.heatmap(matrix, annot=True, fmt=",", linewidths=1,
+                   linecolor='grey', sqaure=True, 
+                   xticklabels=['Predicted\nNo', 'Predicted\nYes'],
+                   yticklabels=['Actaul\nNo', 'Actaul\nYes'])
