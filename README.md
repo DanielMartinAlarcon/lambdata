@@ -1,1 +1,1 @@
-Nothing to see here, folks.  Move along.
+A package written to practice unit testing and documentation.

@@ -1,5 +1,3 @@
-"""Lambdata, a data science helper
+"""General tools for Data Science
 """
-import numpy as np
-import pandas as pd
-import seaborn as sns
+
