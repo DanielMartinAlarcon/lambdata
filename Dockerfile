@@ -10,5 +10,6 @@ RUN apt-get update && \
   apt-get install python3-pip curl nano -y && \
   pip3 install pandas && \
   pip3 install sklearn && \
+  pip3 install seaborn && \
   pip3 install -i https://test.pypi.org/simple/ lambdata-danielmartinalarcon && \
   python3 -c "import lambdata_danielmartinalarcon; print('Success!')"
